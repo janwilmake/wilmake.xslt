@@ -1,0 +1,183 @@
+/* Styles for XML Document */
+
+document {
+  display: block;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+title {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+subtitle {
+  display: block;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #ccc;
+}
+
+content {
+  display: block;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  display: block;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+heading {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+paragraph {
+  display: block;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Link Styles for Different Methods */
+
+/* Method 1: XLink */
+link {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+link:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Method 2: Custom hyperlink */
+hyperlink {
+  color: #28a745;
+  text-decoration: none;
+  border-bottom: 1px dotted #28a745;
+  cursor: pointer;
+}
+
+hyperlink:hover {
+  border-bottom: 1px solid #28a745;
+}
+
+/* Method 3: Reference-style */
+ref {
+  color: #dc3545;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+ref:hover {
+  color: #c82333;
+  text-decoration: none;
+}
+
+references {
+  display: none;
+}
+
+/* Method 4: Anchor-style */
+anchor {
+  color: #6c757d;
+  text-decoration: none;
+  border-bottom: 2px solid #6c757d;
+  cursor: pointer;
+}
+
+anchor:hover {
+  color: #545b62;
+  border-bottom-color: #545b62;
+}
+
+/* Method 5: Navigation */
+navigation {
+  display: block;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+navitem {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+navitem:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+navitem text {
+  display: inline;
+  font-weight: bold;
+}
+
+navitem url {
+  display: inline;
+  margin-left: 10px;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+navitem:hover url {
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+}
+
+copyright {
+  display: block;
+  margin-bottom: 10px;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+footer link {
+  font-size: 0.9em;
+}

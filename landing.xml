@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="landing.css"?>
+<page>
+  <header>
+    <logo>MyCompany</logo>
+    <nav>
+      <navitem>Home</navitem>
+      <navitem>About</navitem>
+      <navitem>Services</navitem>
+      <navitem>Contact</navitem>
+    </nav>
+  </header>
+  
+  <hero>
+    <title>Welcome to Our Landing Page</title>
+    <subtitle>Built with XML and CSS</subtitle>
+    <cta>Get Started</cta>
+  </hero>
+  
+  <features>
+    <feature>
+      <icon>🚀</icon>
+      <heading>Fast Performance</heading>
+      <description>Lightning-fast load times</description>
+    </feature>
+    <feature>
+      <icon>🎨</icon>
+      <heading>Beautiful Design</heading>
+      <description>Modern and responsive layouts</description>
+    </feature>
+    <feature>
+      <icon>🔧</icon>
+      <heading>Easy to Use</heading>
+      <description>Simple and intuitive interface</description>
+    </feature>
+  </features>
+  
+  <footer>
+    <copyright>© 2024 MyCompany. All rights reserved.</copyright>
+  </footer>
+</page>

@@ -1,0 +1,244 @@
+{
+  "tweets": [
+    {
+      "id": 1,
+      "user": {
+        "username": "@tech_explorer",
+        "initial": "T"
+      },
+      "timestamp": "2025-05-13 10:30:00",
+      "content": "Just discovered an amazing new AI tool that helps with code review! 🚀 Machine learning is truly revolutionizing software development.",
+      "likes": 234,
+      "retweets": 56,
+      "replies": 12
+    },
+    {
+      "id": 2,
+      "user": {
+        "username": "@foodie_adventures",
+        "initial": "F"
+      },
+      "timestamp": "2025-05-13 09:45:00",
+      "content": "Found the most incredible ramen spot downtown! 🍜 The tonkotsu broth is to die for. #FoodieLife #RamenLove",
+      "likes": 567,
+      "retweets": 89,
+      "replies": 34
+    },
+    {
+      "id": 3,
+      "user": {
+        "username": "@nature_photo",
+        "initial": "N"
+      },
+      "timestamp": "2025-05-13 08:20:00",
+      "content": "Caught this stunning sunrise at the beach this morning 🌅 Nature never fails to amaze! #Photography #NatureLovers",
+      "likes": 1023,
+      "retweets": 234,
+      "replies": 78
+    },
+    {
+      "id": 4,
+      "user": {
+        "username": "@dev_humor",
+        "initial": "D"
+      },
+      "timestamp": "2025-05-13 07:15:00",
+      "content": "Me: \"It works on my machine.\" Dev Ops: \"Then we'll ship your machine.\" 😅 #ProgrammerHumor #CodingLife",
+      "likes": 2341,
+      "retweets": 567,
+      "replies": 123
+    },
+    {
+      "id": 5,
+      "user": {
+        "username": "@fitness_guru",
+        "initial": "F"
+      },
+      "timestamp": "2025-05-13 06:00:00",
+      "content": "Remember: Progress is progress, no matter how small! 💪 Keep pushing towards your fitness goals. You've got this!",
+      "likes": 456,
+      "retweets": 123,
+      "replies": 45
+    },
+    {
+      "id": 6,
+      "user": {
+        "username": "@book_worm",
+        "initial": "B"
+      },
+      "timestamp": "2025-05-12 22:30:00",
+      "content": "Just finished reading \"The Midnight Library\" - what an emotional rollercoaster! 📚 Anyone else read it? Let's discuss!",
+      "likes": 789,
+      "retweets": 167,
+      "replies": 89
+    },
+    {
+      "id": 7,
+      "user": {
+        "username": "@crypto_analyst",
+        "initial": "C"
+      },
+      "timestamp": "2025-05-12 20:45:00",
+      "content": "Interesting market movements today. BTC showing strong resistance at 45k. Remember to always DYOR! 📈 #Cryptocurrency",
+      "likes": 345,
+      "retweets": 98,
+      "replies": 67
+    },
+    {
+      "id": 8,
+      "user": {
+        "username": "@travel_tales",
+        "initial": "T"
+      },
+      "timestamp": "2025-05-12 18:00:00",
+      "content": "Just booked my trip to Japan! 🇯🇵 Cherry blossom season, here I come! Any must-visit spots in Tokyo?",
+      "likes": 912,
+      "retweets": 201,
+      "replies": 156
+    },
+    {
+      "id": 9,
+      "user": {
+        "username": "@gaming_pro",
+        "initial": "G"
+      },
+      "timestamp": "2025-05-12 16:30:00",
+      "content": "That final boss battle was INSANE! 🎮 Took me 3 hours but finally beat it. Who else is playing Elden Ring 2?",
+      "likes": 678,
+      "retweets": 145,
+      "replies": 234
+    },
+    {
+      "id": 10,
+      "user": {
+        "username": "@science_facts",
+        "initial": "S"
+      },
+      "timestamp": "2025-05-12 14:15:00",
+      "content": "Did you know? Octopuses have three hearts and blue blood! 🐙 Nature is absolutely fascinating. #ScienceFacts",
+      "likes": 1567,
+      "retweets": 456,
+      "replies": 89
+    },
+    {
+      "id": 11,
+      "user": {
+        "username": "@coffee_addict",
+        "initial": "C"
+      },
+      "timestamp": "2025-05-12 12:00:00",
+      "content": "Is it just me or does coffee taste better on Monday mornings? ☕ #CoffeeLover #MondayMotivation",
+      "likes": 234,
+      "retweets": 56,
+      "replies": 78
+    },
+    {
+      "id": 12,
+      "user": {
+        "username": "@movie_critic",
+        "initial": "M"
+      },
+      "timestamp": "2025-05-12 10:30:00",
+      "content": "Just watched the new sci-fi thriller - mind completely blown! 🤯 Without spoilers: GO WATCH IT NOW! #MovieNight",
+      "likes": 890,
+      "retweets": 234,
+      "replies": 145
+    },
+    {
+      "id": 13,
+      "user": {
+        "username": "@startup_life",
+        "initial": "S"
+      },
+      "timestamp": "2025-05-12 08:45:00",
+      "content": "Excited to announce our Series A funding! 🚀 Thank you to everyone who believed in our vision. The journey continues!",
+      "likes": 2345,
+      "retweets": 678,
+      "replies": 234
+    },
+    {
+      "id": 14,
+      "user": {
+        "username": "@art_daily",
+        "initial": "A"
+      },
+      "timestamp": "2025-05-12 07:00:00",
+      "content": "Working on a new digital painting. Sometimes the creative process is messy, but that's where the magic happens! 🎨",
+      "likes": 567,
+      "retweets": 123,
+      "replies": 56
+    },
+    {
+      "id": 15,
+      "user": {
+        "username": "@sports_fan",
+        "initial": "S"
+      },
+      "timestamp": "2025-05-11 22:00:00",
+      "content": "What a game! That last-minute goal had me on the edge of my seat! ⚽ #ChampionsLeague",
+      "likes": 1234,
+      "retweets": 345,
+      "replies": 189
+    },
+    {
+      "id": 16,
+      "user": {
+        "username": "@music_vibes",
+        "initial": "M"
+      },
+      "timestamp": "2025-05-11 20:15:00",
+      "content": "New album just dropped and I'm obsessed! 🎵 Been on repeat all day. What's everyone listening to lately?",
+      "likes": 678,
+      "retweets": 156,
+      "replies": 98
+    },
+    {
+      "id": 17,
+      "user": {
+        "username": "@eco_warrior",
+        "initial": "E"
+      },
+      "timestamp": "2025-05-11 18:30:00",
+      "content": "Small changes make big differences! Started using reusable bags and bottles. What eco-friendly swaps have you made? 🌍",
+      "likes": 456,
+      "retweets": 234,
+      "replies": 167
+    },
+    {
+      "id": 18,
+      "user": {
+        "username": "@pet_lover",
+        "initial": "P"
+      },
+      "timestamp": "2025-05-11 16:45:00",
+      "content": "My cat just learned how to open doors. I'm both proud and terrified. 😺 #CatsOfTwitter #PetLife",
+      "likes": 3456,
+      "retweets": 789,
+      "replies": 456
+    },
+    {
+      "id": 19,
+      "user": {
+        "username": "@space_news",
+        "initial": "S"
+      },
+      "timestamp": "2025-05-11 14:00:00",
+      "content": "Breaking: New exoplanet discovered in the habitable zone! 🪐 Could this be our next home? #SpaceExploration",
+      "likes": 2678,
+      "retweets": 890,
+      "replies": 345
+    },
+    {
+      "id": 20,
+      "user": {
+        "username": "@daily_wisdom",
+        "initial": "D"
+      },
+      "timestamp": "2025-05-11 12:00:00",
+      "content": "\"The only way to do great work is to love what you do.\" - Steve Jobs. Happy Friday everyone! 💫 #FridayMotivation",
+      "likes": 1890,
+      "retweets": 567,
+      "replies": 234
+    }
+  ]
+}

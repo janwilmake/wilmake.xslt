@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lmpify.xsl"?>
+<application>
+    <metadata>
+        <title>lmpify.com - let me prompt it for you</title>
+        <description>A web application for managing and submitting prompts to AI models</description>
+        <viewport>width=device-width, initial-scale=1.0</viewport>
+    </metadata>
+    
+    <branding>
+        <icon class="gradient-icon" />
+        <heading>let me prompt it for you</heading>
+    </branding>
+    
+    <main-interface>
+        <prompt-form id="promptForm" method="POST">
+            <textarea-section>
+                <controls position="left">
+                    <button id="addUrlButton" type="icon" action="add-url">
+                        <icon type="plus" />
+                        <tooltip>Add URL</tooltip>
+                    </button>
+                    <button id="configButton" type="icon" action="open-config">
+                        <icon type="menu-dots" />
+                        <tooltip>Configuration</tooltip>
+                    </button>
+                </controls>
+                
+                <prompt-input id="promptTextarea" 
+                    placeholder="Type your prompt..." 
+                    resize="vertical"
+                    minHeight="96px"
+                    maxHeight="400px" />
+                
+                <controls position="right">
+                    <submit-button id="submitButton" disabled="true">
+                        <text>Submit</text>
+                        <icon type="arrow-up" />
+                    </submit-button>
+                </controls>
+            </textarea-section>
+        </prompt-form>
+    </main-interface>
+    
+    <configuration-panel id="configView" visible="false">
+        <header>
+            <title>Configuration</title>
+        </header>
+        
+        <config-form>
+            <field>
+                <label for="modelInput">Model</label>
+                <input type="text" id="modelInput" placeholder="e.g., gpt-4" />
+            </field>
+            
+            <field>
+                <label for="basePathInput">Base Path</label>
+                <input type="text" id="basePathInput" placeholder="e.g., https://api.openai.com/v1" />
+            </field>
+            
+            <field>
+                <label for="apiKeyInput">API Key</label>
+                <input type="password" id="apiKeyInput" placeholder="Your API key" />
+            </field>
+            
+            <actions>
+                <button id="saveConfigButton" type="primary">Save</button>
+                <button id="cancelConfigButton" type="secondary">Cancel</button>
+            </actions>
+        </config-form>
+    </configuration-panel>
+    
+    <behaviors>
+        <textarea-behavior>
+            <auto-resize />
+            <submit-on-enter modifier="!shift" />
+            <enable-submit-when-not-empty />
+        </textarea-behavior>
+        
+        <url-insertion>
+            <insert-at-cursor with-newlines="true" />
+        </url-insertion>
+        
+        <form-submission>
+            <generate-url>
+                <slug-from-content length="20" />
+                <append-hash length="7" />
+            </generate-url>
+            <include-config-values />
+        </form-submission>
+        
+        <storage>
+            <persist-to-localStorage keys="model,basePath,apiKey" />
+        </storage>
+    </behaviors>
+</application>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="links.css"?>
+<document xmlns:xlink="http://www.w3.org/1999/xlink">
+    <header>
+        <title>Lorem Ipsum with Links</title>
+        <subtitle>Demonstrating Various Link Methods in XML</subtitle>
+    </header>
+    
+    <content>
+        <section>
+            <heading>Method 1: Using XLink</heading>
+            <paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <link xlink:type="simple" xlink:href="https://www.example.com" xlink:show="new">
+                    Visit Example.com
+                </link> 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </paragraph>
+        </section>
+        
+        <section>
+            <heading>Method 2: Custom Link Elements</heading>
+            <paragraph>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                <hyperlink url="https://www.google.com" target="_blank">Google Search</hyperlink> 
+                nisi ut aliquip ex ea commodo consequat.
+            </paragraph>
+        </section>
+        
+        <section>
+            <heading>Method 3: Reference-style Links</heading>
+            <paragraph>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                <ref id="link1">Wikipedia</ref> eu fugiat nulla pariatur. Excepteur sint 
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                <ref id="link2">GitHub</ref> anim id est laborum.
+            </paragraph>
+            
+            <references>
+                <reference id="link1" href="https://www.wikipedia.org" />
+                <reference id="link2" href="https://www.github.com" />
+            </references>
+        </section>
+        
+        <section>
+            <heading>Method 4: HTML-like Anchor Elements</heading>
+            <paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                <anchor href="https://www.stackoverflow.com" title="Stack Overflow">
+                    Stack Overflow Q&amp;A
+                </anchor> 
+                tempor incididunt ut labore et dolore magna aliqua.
+            </paragraph>
+        </section>
+        
+        <section>
+            <heading>Method 5: Navigation List</heading>
+            <navigation>
+                <navitem>
+                    <text>Home Page</text>
+                    <url>https://www.mysite.com</url>
+                </navitem>
+                <navitem>
+                    <text>About Us</text>
+                    <url>https://www.mysite.com/about</url>
+                </navitem>
+                <navitem>
+                    <text>Contact</text>
+                    <url>https://www.mysite.com/contact</url>
+                </navitem>
+            </navigation>
+        </section>
+    </content>
+    
+    <footer>
+        <copyright>© 2024 Lorem Ipsum Examples</copyright>
+        <link xlink:href="https://www.w3.org/TR/xlink/" xlink:type="simple">
+            Learn more about XLink
+        </link>
+    </footer>
+</document>

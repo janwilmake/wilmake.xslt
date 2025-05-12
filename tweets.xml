@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="tweets.css"?>
+<tweets>
+    <tweet>
+        <id>1</id>
+        <user data-initial="T">@tech_explorer</user>
+        <timestamp>2025-05-13 10:30:00</timestamp>
+        <content>Just discovered an amazing new AI tool that helps with code review! 🚀 Machine learning is truly revolutionizing software development.</content>
+        <likes>234</likes>
+        <retweets>56</retweets>
+        <replies>12</replies>
+    </tweet>
+    
+    <tweet>
+        <id>2</id>
+        <user data-initial="F">@foodie_adventures</user>
+        <timestamp>2025-05-13 09:45:00</timestamp>
+        <content>Found the most incredible ramen spot downtown! 🍜 The tonkotsu broth is to die for. #FoodieLife #RamenLove</content>
+        <likes>567</likes>
+        <retweets>89</retweets>
+        <replies>34</replies>
+    </tweet>
+    
+    <tweet>
+        <id>3</id>
+        <user data-initial="N">@nature_photo</user>
+        <timestamp>2025-05-13 08:20:00</timestamp>
+        <content>Caught this stunning sunrise at the beach this morning 🌅 Nature never fails to amaze! #Photography #NatureLovers</content>
+        <likes>1023</likes>
+        <retweets>234</retweets>
+        <replies>78</replies>
+    </tweet>
+    
+    <tweet>
+        <id>4</id>
+        <user data-initial="D">@dev_humor</user>
+        <timestamp>2025-05-13 07:15:00</timestamp>
+        <content>Me: "It works on my machine." Dev Ops: "Then we'll ship your machine." 😅 #ProgrammerHumor #CodingLife</content>
+        <likes>2341</likes>
+        <retweets>567</retweets>
+        <replies>123</replies>
+    </tweet>
+    
+    <tweet>
+        <id>5</id>
+        <user data-initial="F">@fitness_guru</user>
+        <timestamp>2025-05-13 06:00:00</timestamp>
+        <content>Remember: Progress is progress, no matter how small! 💪 Keep pushing towards your fitness goals. You've got this!</content>
+        <likes>456</likes>
+        <retweets>123</retweets>
+        <replies>45</replies>
+    </tweet>
+    
+    <tweet>
+        <id>6</id>
+        <user data-initial="B">@book_worm</user>
+        <timestamp>2025-05-12 22:30:00</timestamp>
+        <content>Just finished reading "The Midnight Library" - what an emotional rollercoaster! 📚 Anyone else read it? Let's discuss!</content>
+        <likes>789</likes>
+        <retweets>167</retweets>
+        <replies>89</replies>
+    </tweet>
+    
+    <tweet>
+        <id>7</id>
+        <user data-initial="C">@crypto_analyst</user>
+        <timestamp>2025-05-12 20:45:00</timestamp>
+        <content>Interesting market movements today. BTC showing strong resistance at 45k. Remember to always DYOR! 📈 #Cryptocurrency</content>
+        <likes>345</likes>
+        <retweets>98</retweets>
+        <replies>67</replies>
+    </tweet>
+    
+    <tweet>
+        <id>8</id>
+        <user data-initial="T">@travel_tales</user>
+        <timestamp>2025-05-12 18:00:00</timestamp>
+        <content>Just booked my trip to Japan! 🇯🇵 Cherry blossom season, here I come! Any must-visit spots in Tokyo?</content>
+        <likes>912</likes>
+        <retweets>201</retweets>
+        <replies>156</replies>
+    </tweet>
+    
+    <tweet>
+        <id>9</id>
+        <user data-initial="G">@gaming_pro</user>
+        <timestamp>2025-05-12 16:30:00</timestamp>
+        <content>That final boss battle was INSANE! 🎮 Took me 3 hours but finally beat it. Who else is playing Elden Ring 2?</content>
+        <likes>678</likes>
+        <retweets>145</retweets>
+        <replies>234</replies>
+    </tweet>
+    
+    <tweet>
+        <id>10</id>
+        <user data-initial="S">@science_facts</user>
+        <timestamp>2025-05-12 14:15:00</timestamp>
+        <content>Did you know? Octopuses have three hearts and blue blood! 🐙 Nature is absolutely fascinating. #ScienceFacts</content>
+        <likes>1567</likes>
+        <retweets>456</retweets>
+        <replies>89</replies>
+    </tweet>
+    
+    <tweet>
+        <id>11</id>
+        <user data-initial="C">@coffee_addict</user>
+        <timestamp>2025-05-12 12:00:00</timestamp>
+        <content>Is it just me or does coffee taste better on Monday mornings? ☕ #CoffeeLover #MondayMotivation</content>
+        <likes>234</likes>
+        <retweets>56</retweets>
+        <replies>78</replies>
+    </tweet>
+    
+    <tweet>
+        <id>12</id>
+        <user data-initial="M">@movie_critic</user>
+        <timestamp>2025-05-12 10:30:00</timestamp>
+        <content>Just watched the new sci-fi thriller - mind completely blown! 🤯 Without spoilers: GO WATCH IT NOW! #MovieNight</content>
+        <likes>890</likes>
+        <retweets>234</retweets>
+        <replies>145</replies>
+    </tweet>
+    
+    <tweet>
+        <id>13</id>
+        <user data-initial="S">@startup_life</user>
+        <timestamp>2025-05-12 08:45:00</timestamp>
+        <content>Excited to announce our Series A funding! 🚀 Thank you to everyone who believed in our vision. The journey continues!</content>
+        <likes>2345</likes>
+        <retweets>678</retweets>
+        <replies>234</replies>
+    </tweet>
+    
+    <tweet>
+        <id>14</id>
+        <user data-initial="A">@art_daily</user>
+        <timestamp>2025-05-12 07:00:00</timestamp>
+        <content>Working on a new digital painting. Sometimes the creative process is messy, but that's where the magic happens! 🎨</content>
+        <likes>567</likes>
+        <retweets>123</retweets>
+        <replies>56</replies>
+    </tweet>
+    
+    <tweet>
+        <id>15</id>
+        <user data-initial="S">@sports_fan</user>
+        <timestamp>2025-05-11 22:00:00</timestamp>
+        <content>What a game! That last-minute goal had me on the edge of my seat! ⚽ #ChampionsLeague</content>
+        <likes>1234</likes>
+        <retweets>345</retweets>
+        <replies>189</replies>
+    </tweet>
+    
+    <tweet>
+        <id>16</id>
+        <user data-initial="M">@music_vibes</user>
+        <timestamp>2025-05-11 20:15:00</timestamp>
+        <content>New album just dropped and I'm obsessed! 🎵 Been on repeat all day. What's everyone listening to lately?</content>
+        <likes>678</likes>
+        <retweets>156</retweets>
+        <replies>98</replies>
+    </tweet>
+    
+    <tweet>
+        <id>17</id>
+        <user data-initial="E">@eco_warrior</user>
+        <timestamp>2025-05-11 18:30:00</timestamp>
+        <content>Small changes make big differences! Started using reusable bags and bottles. What eco-friendly swaps have you made? 🌍</content>
+        <likes>456</likes>
+        <retweets>234</retweets>
+        <replies>167</replies>
+    </tweet>
+    
+    <tweet>
+        <id>18</id>
+        <user data-initial="P">@pet_lover</user>
+        <timestamp>2025-05-11 16:45:00</timestamp>
+        <content>My cat just learned how to open doors. I'm both proud and terrified. 😺 #CatsOfTwitter #PetLife</content>
+        <likes>3456</likes>
+        <retweets>789</retweets>
+        <replies>456</replies>
+    </tweet>
+    
+    <tweet>
+        <id>19</id>
+        <user data-initial="S">@space_news</user>
+        <timestamp>2025-05-11 14:00:00</timestamp>
+        <content>Breaking: New exoplanet discovered in the habitable zone! 🪐 Could this be our next home? #SpaceExploration</content>
+        <likes>2678</likes>
+        <retweets>890</retweets>
+        <replies>345</replies>
+    </tweet>
+    
+    <tweet>
+        <id>20</id>
+        <user data-initial="D">@daily_wisdom</user>
+        <timestamp>2025-05-11 12:00:00</timestamp>
+        <content>"The only way to do great work is to love what you do." - Steve Jobs. Happy Friday everyone! 💫 #FridayMotivation</content>
+        <likes>1890</likes>
+        <retweets>567</retweets>
+        <replies>234</replies>
+    </tweet>
+</tweets>

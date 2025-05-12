@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to XML with CSS</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .container {
+            display: flex;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .editor,
+        .preview {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #3498db;
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 500px;
+            border: none;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            resize: vertical;
+        }
+
+        #xml-preview {
+            padding: 1rem;
+            min-height: 500px;
+            overflow-y: auto;
+        }
+
+        /* Apply our markdown XML styles here */
+        #xml-preview * {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        #xml-preview document {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        #xml-preview heading {
+            font-weight: bold;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        #xml-preview heading[level="1"] {
+            font-size: 2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.3rem;
+        }
+
+        #xml-preview heading[level="2"] {
+            font-size: 1.5rem;
+            color: #34495e;
+        }
+
+        #xml-preview paragraph {
+            margin: 0.8rem 0;
+        }
+
+        #xml-preview bold {
+            display: inline;
+            font-weight: bold;
+        }
+
+        #xml-preview italic {
+            display: inline;
+            font-style: italic;
+        }
+
+        #xml-preview code {
+            display: inline;
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            color: #e74c3c;
+        }
+
+        #xml-preview link {
+            display: inline;
+            color: #3498db;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #xml-preview list {
+            margin: 0.8rem 0;
+            padding-left: 2rem;
+        }
+
+        #xml-preview item {
+            margin: 0.3rem 0;
+        }
+
+        #xml-preview list[type="unordered"]>item::before {
+            content: "• ";
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        #xml-preview blockquote {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+
+        #xml-preview quote {
+            font-style: italic;
+            color: #5d6d7e;
+        }
+
+        #xml-preview codeblock {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #282c34;
+            color: #abb2bf;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        #xml-preview divider {
+            margin: 1.5rem 0;
+            height: 2px;
+            background: #ecf0f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="editor">
+            <div class="header">Markdown Input</div>
+            <textarea id="markdown-input"># Hello World!
+
+This is a **markdown** document with *italic* text and `inline code`.
+
+## Features
+
+- Bullet points
+- Are awesome
+- And easy
+
+1. Numbered lists
+2. Work too!
+
+> Blockquotes look great
+> when styled properly
+
+Here's some code:
+
+```javascript
+function hello() {
+  console.log("Hello!");
+}
+```
+
+---
+
+[Click here](https://example.com) for more info.</textarea>
+        </div>
+
+        <div class="preview">
+            <div class="header">Styled XML Output</div>
+            <div id="xml-preview"></div>
+        </div>
+    </div>
+
+    <script>
+        function markdownToXML(markdown) {
+            let xml = '<document>\n';
+            const lines = markdown.split('\n');
+            let inCodeBlock = false;
+            let inList = false;
+            let listType = '';
+
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i];
+
+                // Code blocks
+                if (line.startsWith('```')) {
+                    if (inCodeBlock) {
+                        xml += '</codeblock>\n';
+                        inCodeBlock = false;
+                    } else {
+                        const lang = line.slice(3).trim();
+                        xml += `<codeblock${lang ? ` language="${lang}"` : ''}>\n`;
+                        inCodeBlock = true;
+                    }
+                    continue;
+                }
+
+                if (inCodeBlock) {
+                    xml += line + '\n';
+                    continue;
+                }
+
+                // Headers
+                if (line.startsWith('#')) {
+                    const level = line.match(/^#+/)[0].length;
+                    const text = line.slice(level).trim();
+                    xml += `<heading level="${level}">${text}</heading>\n`;
+                    continue;
+                }
+
+                // Lists
+                if (line.match(/^[-*+] /) || line.match(/^\d+\. /)) {
+                    const isOrdered = line.match(/^\d+\. /) !== null;
+                    const currentType = isOrdered ? 'ordered' : 'unordered';
+
+                    if (!inList || listType !== currentType) {
+                        if (inList) xml += '</list>\n';
+                        xml += `<list type="${currentType}">\n`;
+                        inList = true;
+                        listType = currentType;
+                    }
+
+                    const text = line.replace(/^[-*+] |^\d+\. /, '');
+                    xml += `<item>${text}</item>\n`;
+                    continue;
+                } else if (inList && line.trim() === '') {
+                    xml += '</list>\n';
+                    inList = false;
+                    continue;
+                }
+
+                // Blockquotes
+                if (line.startsWith('>')) {
+                    const text = line.slice(1).trim();
+                    if (!lines[i - 1]?.startsWith('>')) {
+                        xml += '<blockquote>\n';
+                    }
+                    xml += `<quote>${text}</quote>\n`;
+                    if (!lines[i + 1]?.startsWith('>')) {
+                        xml += '</blockquote>\n';
+                    }
+                    continue;
+                }
+
+                // Horizontal rule
+                if (line.match(/^[-*_]{3,}$/)) {
+                    xml += '<divider/>\n';
+                    continue;
+                }
+
+                // Paragraphs
+                if (line.trim()) {
+                    let formatted = line
+                        .replace(/\*\*(.+?)\*\*/g, '<bold>$1</bold>')
+                        .replace(/\*(.+?)\*/g, '<italic>$1</italic>')
+                        .replace(/`(.+?)`/g, '<code>$1</code>')
+                        .replace(/\[(.+?)\]\((.+?)\)/g, '<link href="$2">$1</link>');
+
+                    xml += `<paragraph>${formatted}</paragraph>\n`;
+                }
+            }
+
+            if (inList) xml += '</list>\n';
+            if (inCodeBlock) xml += '</codeblock>\n';
+
+            xml += '</document>';
+            return xml;
+        }
+
+        function updatePreview() {
+            const markdown = document.getElementById('markdown-input').value;
+            const xml = markdownToXML(markdown);
+            document.getElementById('xml-preview').innerHTML = xml;
+        }
+
+        // Update preview on input
+        document.getElementById('markdown-input').addEventListener('input', updatePreview);
+
+        // Initial render
+        updatePreview();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+name = "xslt"
+compatibility_date = "2025-04-21"
+dev.port = 3000
+assets.directory = "./"
+
+routes = [
+  { pattern = "xslt.wilmake.com", custom_domain = true }
+]
